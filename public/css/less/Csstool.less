@@ -1,0 +1,23 @@
+.boxshadow(@color, @h, @v, @b, @s) {
+    -webkit-box-shadow: @color @h @v  @b @s;
+    -moz-box-shadow: @color @h @v  @b @s;
+    -ms-box-shadow: @color @h @v  @b @s;
+    -o-box-shadow: @color @h @v  @b @s;
+    box-shadow: @color @h @v  @b @s;
+}
+
+.boxshadow(@color, @h, @v, @b, @s, @inset) {
+    -webkit-box-shadow: @color @h @v  @b @s, @inset;
+    -moz-box-shadow: @color @h @v  @b @s, @inset;
+    -ms-box-shadow: @color @h @v  @b @s, @inset;
+    -o-box-shadow: @color @h @v  @b @s, @inset;
+    box-shadow: @color @h @v  @b @s, @inset;
+}
+
+.border-radius(@tl, @tr, @bl, @br) {
+    -webkit-border-radius: @tl @tr @bl @br;
+    -moz-border-radius: @tl @tr @bl @br;
+    -ms-border-radius: @tl @tr @bl @br;
+    -o-border-radius: @tl @tr @bl @br;
+    border-radius: @tl @tr @bl @br;
+}

@@ -1,0 +1,148 @@
+/*TodoList*/
+@import "Csstool";
+todolist.close {
+    display: none;
+}
+
+#todoapp {
+    background: #fff;
+    padding:20px;
+    margin-bottom: 40px;
+    .boxshadow(rgba(0, 0, 0, 0.2), 0, 2px, 6px, 0);
+    .border-radius(0, 0, 5px, 5px);
+    box-sizing: border-box;
+    width:50%;
+    margin:0 auto;
+    position: relative;
+    
+    #todoapp-header{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        padding:0 0 10px 0;
+    }
+
+    input[type="text"] {
+        width: 516px;
+        font-size: 24px;
+        font-family: inherit;
+        line-height: 1.4em;
+        border: 0;
+        outline: none;
+        padding: 6px;
+        border: 1px solid #999999;
+        .boxshadow(rgba(0, 0, 0, 0.2), 0, 1px, 2px, 0, inset);
+
+        &::-webkit-input-placeholder {
+            font-style: italic;
+        }
+    }
+
+    footer {
+        display: none;
+        margin: 0 -20px -20px -20px;
+        overflow: hidden;
+        color: #555555;
+        background: #f4fce8;
+        border-top: 1px solid #ededed;
+        padding: 0 20px;
+        line-height: 37px;
+        .border-radius(0, 0, 5px, 5px);
+    }
+
+    #todo-list {
+        margin:10px 0;
+        padding: 0;
+        list-style: none;
+
+        li{
+            padding: 10px 20px 10px 0;
+            position: relative;
+            font-size: 18px;
+            border-bottom: 1px solid #cccccc;
+            overflow: hidden;
+
+            span{
+                font-size: 13px;
+                  position: absolute;
+                  right: 40px;
+                  bottom: 10px;
+                  color: #999;
+            }
+
+            &:last-child{
+                border-bottom: none;
+            }
+
+            &.done label {
+                color: #777777;
+                text-decoration: line-through;
+            }
+
+            &:hover .destroy{
+                background-position: 0 -20px;
+            }
+
+            &.editing {
+                border-bottom: none;
+                margin-top: -1px;
+                padding: 0;
+
+                & .edit{
+                    display: block;
+                    width: 494px;
+                    padding: 13px 15px 14px 20px;
+                    margin: 0;
+                }
+
+                & .view {
+                    display: none;
+
+                    & label{
+                        word-break: break-word;
+                        overflow: hidden; 
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: -1px;
+                }
+            }
+
+            & .edit{
+                display: none;
+            }
+        }
+
+        .destroy{
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            background: url(../img/destroy.png) no-repeat;
+        }
+    }
+
+    a.close{
+        background: url(../img/destroy.png);
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        right: 2%;
+        top: 6%;
+        cursor: pointer;
+        opacity: 0;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

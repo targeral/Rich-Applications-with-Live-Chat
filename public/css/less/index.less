@@ -1,0 +1,101 @@
+@media screen and (min-width: 768px) {
+
+        #app-chat, #app-region{
+            height: 100%; 
+            position: absolute;
+            top:0;bottom: 0;
+            display: inline-block;
+            overflow-y:hidden;
+            overflow-x:visible;
+            overflow: hidden;
+        }
+
+        #app-chat {
+            width:20%;
+            border-right: 4px solid #ccc;
+            border-left:3px solid #ccc;
+            left:0;
+        }
+
+        #app-region{
+            width:79%;
+            border-left: 4px solid #ccc;
+            border-right: 5px solid #ccc;
+            right:0;
+        }
+        #app-chat > section[data-face] {
+            display: none;
+        }
+        #app-chat > section.face_show {
+            display: block;
+        }
+        #mask {
+            display: none;
+            height: 0;
+            z-index: 100;
+        }
+        #mask.show{
+            display: block;
+        }
+
+        #mask .mask-chat{
+             width:30%;
+            height: 40%;
+            position: absolute;
+            top:0;left:0;bottom: 0;right: 0;
+            background: rgba(0,0,0,0.1);
+            margin:auto;
+            border:1px solid #ccc;
+            resize: both;
+            overflow: auto;
+        }
+
+        #mask .mask-chat.mz {
+            display: none;
+        }
+        
+        #mask .chat-box{
+            background: rgba(0,0,0,0.3);
+            box-shadow: 1px 1px 1px #ccc, -1px -1px 1px #ccc;
+            height: 98%;
+        }
+        #mask .chat-box .chat-fn{
+            display: block;
+            height: 4%;
+            width:100%;
+            background: rgba(220, 100, 23, 1);
+        }
+        #mask .chat-box .chat-fn span{
+            float: right;
+            height: 100%;
+            width:3%;
+            background: rgba(35, 189, 121, 0.7);
+            text-align: center;
+            border:1px solid #666;
+            box-sizing:border-box;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        #app-chat.logout > section{
+            display: none;
+        }
+
+        #app-chat > #login {
+            display: none;
+        }
+
+        #app-chat.logout > #login{
+            display: block;
+        }
+
+        }   
+        @media screen and (max-width: 768px) {
+            #app-chat{
+                width:30%;
+            }
+
+            #app-region{
+                width: 69%;
+            }
+        }

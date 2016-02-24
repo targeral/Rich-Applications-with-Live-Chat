@@ -1,0 +1,55 @@
+section.chat-session {
+        height: 95%;
+        width:100%;
+        display: block;
+        overflow: auto;
+        
+        .session-item.online  .session-img  img{
+            -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+            filter: grayscale(0%);
+        }
+
+        .session-item {
+            width:100%;
+            height: 7%;
+            display: block;
+            box-sizing: border-box;
+            border:2px solid rgba(51, 51, 51, 0.7);
+            cursor: pointer;
+
+            .session-img{
+                display: inline-block;
+                box-sizing: border-box;
+                width:19%;
+                height: 100%;
+                padding:2px;
+
+                img{
+                    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+                    filter: grayscale(100%);
+                    width:100%;
+                    height: 100%;
+                }
+            }
+
+            .session-user {
+                margin-left:10px;
+                min-width: 40%;
+                height: 100%;
+                vertical-align: top;
+                display: inline-block;
+                box-sizing: border-box;
+
+                h2 {
+                    font-size: 1em;
+                    line-height: 1.5;
+                    font-weight: bold;
+                }
+
+                p{
+                    font-size: 1em;
+                    font-style: italic;
+                }
+            }
+        }
+    }

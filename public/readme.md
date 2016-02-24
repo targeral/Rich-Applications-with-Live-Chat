@@ -1,0 +1,12 @@
+gulp:
+gulp-jshint:npm install jshint gulp-jshint --save-dev
+
+usage : 
+var jshint = require('gulp-jshint');
+var gulp   = require('gulp');
+
+gulp.task('lint', function() {
+  return gulp.src('./lib/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
+});

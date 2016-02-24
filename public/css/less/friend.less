@@ -1,0 +1,104 @@
+/*friend*/
+
+section[data-face=friend] {
+    width:100%;
+    height: 100%;
+
+    & > section.online-count {
+        width:100%;
+        height: 5%;
+        line-height: 1;
+        border:1px solid #ccc;
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+        background: rgba(26,193,199,1);
+        color:#FDBC00;
+        font-weight: bold;
+        position: relative;
+
+        span {
+            display: block;
+            display: block;
+            height: 50%;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
+    }
+
+    & > section.online-items {
+        height: 95%;
+        width:100%;
+        display: block;
+        overflow: auto;
+        
+        .online-item.online  .online-img  img{
+            -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+            filter: grayscale(0%);
+        }
+
+        .online-item {
+            width:100%;
+            height: 7%;
+            display: block;
+            box-sizing: border-box;
+            border:2px solid rgba(220, 156, 156, 0.7);
+            cursor: pointer;
+            position: relative;
+
+            span.newMsg{
+                display: block;
+                border-radius: 50%;
+                background: red;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 11px;
+                right: 8px;
+            }
+
+            span.nothingMsg {
+                display: none;
+            }
+
+            .online-img{
+                display: inline-block;
+                box-sizing: border-box;
+                width:19%;
+                height: 100%;
+                padding:2px;
+
+                img{
+                    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+                    filter: grayscale(100%);
+                    width:100%;
+                    height: 100%;
+                }
+            }
+
+            .online-user {
+                margin-left:10px;
+                min-width: 40%;
+                height: 100%;
+                vertical-align: top;
+                display: inline-block;
+                box-sizing: border-box;
+
+                h2 {
+                    font-size: 1em;
+                    line-height: 1.5;
+                    font-weight: bold;
+                }
+
+                p{
+                    font-size: 1em;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
