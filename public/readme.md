@@ -1,12 +1,16 @@
-gulp:
-gulp-jshint:npm install jshint gulp-jshint --save-dev
+# 前端部分内容
 
-usage : 
-var jshint = require('gulp-jshint');
-var gulp   = require('gulp');
-
-gulp.task('lint', function() {
-  return gulp.src('./lib/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
-});
+## 想法
+目标:实现能够聊天的协作应用
+目前:
+* 实现聊天功能
+* 实现插件的加载，简单做了一个Todos,
+* 实现了一些设备的响应式兼容
+目前问题:
+* 没有考虑性能的问题，加载过慢，需要后期进行压缩文件，连接文件，将图片组合成一个图片上使用css sprite，做一些优化
+* 文件结构组织上有些乱
+将要做的:
+* 学习构建方法和使用grunt来自动简单的解决目前问题的
+* 学习JavaScript开发应用需要注意的一些事项
+* 学习如何能在手机方面进行响应式开发
+* 待续
